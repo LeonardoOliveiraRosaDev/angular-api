@@ -1,0 +1,110 @@
+ 1º Passo - Primeiramente vamos instalar o bootstrap no nosso projeto
+- instalar
+    npm install bootstrap
+
+2º Passo - Depois abrir o arquivo angular json    
+
+    - na altura da linha 26 adicionar essa linha
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+3º Passo - Agora abrir o terminal novamente para criar nossos componentes
+
+    Criar componente na pasta componentes. se existir sera criada la se nao ela criara automaticamente
+
+      - Criar Componentes
+
+            1º Componente
+          ng g c componentes/employee-create
+            2º Componente
+          ng g c componentes/employee-edit
+            3º Componente
+          ng g c componentes/employee-list
+            4º Componente
+          ng g c componentes/employee-home
+
+4º Passo instalar o Json-Server
+
+    - npm install -g json-server         
+
+5º Passo - Criar nosso banco de dados
+
+     -  Criar uma pasta no projeto chamada server
+       - Criar um novo arquivo neww file
+         - db.json
+
+6º Passo - Abrir o terminal para teste back end
+    
+        - json-server --watch server/db.json
+
+7º Passo - Criar Rotas para nosso componentes
+
+    Imports
+    - no app-routing.module.ts
+
+8º Passo - Dentro do App Modules importar as seguintes dependencias
+
+     // Importar os módulos de dependencia nescessarios
+        - import { HttpClientModule }  from '@angular/common/http';
+        - import { FormsModule } from '@angular/forms';
+
+9º Passo - Criar um Model
+
+    - Toda vez que for lidar com o dados precisamos criar uma estrutura com conjuto de regras
+    - Criar um model
+            - criar uma pasta chamada model 
+                - depois um aquivo       e sse i e de interface
+                    - para criar e assim :   ng g i model/Employee
+                    Assim cria uma pasta model , com um arquivo employee.ts
+                            Dentro desse arquivo criado colocar nosso conjunto de regras
+
+10º Passo - No service que vamos desenhas tudo que acontece criar s de service
+    - ng g s service/rest-api
+
+11º Passo - Registrar no nosso app.module.ts
+    - registrar
+            -import { RestApiService } from './service/rest-api.service'
+                -  providers: [RestApiService],
+
+12º Passo - Abrir o Rest-api-service.ts
+     - Recursos que são nescessários para que tudo funcione
+      - Tarefas Assincronas usaremos o Promisses
+       - Java Script puro
+        - 1º imports
+          Tudo no arquivo
+
+
+13º Passo - 
+
+14º Passo - 
+
+15º Passo - 
+
+16º Passo -
+
+17º Passo - 
+
+18º Passo - 
+
+19º Passo -
+
+20º Passo -
+
+21º Passo -
+
+22º Passo -
+
+23º Passo -
+
+24º Passo -
+
+25º Passo - 
+
+26º Passo -
+
+27º Passo -
+
+28º Passo - 
+
+29º Passo -
+
+30º Passo -
