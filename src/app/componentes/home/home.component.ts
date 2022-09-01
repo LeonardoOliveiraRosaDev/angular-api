@@ -12,4 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // definir uma propriedade
+  tituloHome: string = 'Bem-vindo ao projeto Angular FullStack (back-end - simulado)'
+
 }

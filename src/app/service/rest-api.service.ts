@@ -103,5 +103,23 @@ excluirDados(id:any){
    catchError(this.tratarErro))
 }
 
+// Definir uma função de tratamento de erro que auxiliara na invesstigacao de onde os errose eventualmente ocorre
+tratarErro(erro: any){
+  // definir uma propriedade para receber o valor informativo a respeito de onde é qual foi o erro ocorrido
+  let mensagemErro: any = ''
+
+  // Criar uma estrutura de verificação
+  // Saber em qual pedaço da aplicação o erro ocorre
+  if(erro.error instanceof ErrorEvent){
+    // trattatr o erero - se ocorreu no front
+    mensagemErro = erro.error.meessage
+  }else{
+    // tratar o erro - se ocorrer no back
+    mensagemErro = `Codigo erro: ${erro.status}\nMensagem do erro é: ${erro.meessage}`
+  }
+  // exibir o erro na tela
+  alert(mensagemErro)
+  return throwError(() => mensagemErro)
+}
 
 }
